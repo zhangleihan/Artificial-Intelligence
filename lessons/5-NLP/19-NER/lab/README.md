@@ -4,11 +4,13 @@ Lab Assignment from [AI for Beginners Curriculum](https://github.com/microsoft/a
 
 ## Task
 
-In this lab, you need to train named entity recognition model for medical terms.
+<!-- In this lab, you need to train named entity recognition model for medical terms. -->
+在本实验中，您需要训练医学术语的命名实体识别模型。
 
 ## The Dataset
 
-To train NER model, we need properly labeled dataset with medical entities. [BC5CDR dataset](https://biocreative.bioinformatics.udel.edu/tasks/biocreative-v/track-3-cdr/) contains labeled diseases and chemicals entities from more than 1500 papers. You may download the dataset after registering at their web site.
+<!-- To train NER model, we need properly labeled dataset with medical entities. [BC5CDR dataset](https://biocreative.bioinformatics.udel.edu/tasks/biocreative-v/track-3-cdr/) contains labeled diseases and chemicals entities from more than 1500 papers. You may download the dataset after registering at their web site. -->
+为了训练 NER 模型，我们需要使用医疗实体正确标记的数据集。[BC5CDR dataset](https://biocreative.bioinformatics.udel.edu/tasks/biocreative-v/track-3-cdr/) 数据集包含来自 1500 多篇论文的标记疾病和化学实体。您可以在其网站注册后下载数据集。
 
 BC5CDR Dataset looks like this:
 
@@ -21,9 +23,13 @@ BC5CDR Dataset looks like this:
 ...
 ```
 
-In this dataset, there are paper title and abstract in the first two lines, and then there are individual entities, with beginning and end positions within title+abstract block. In addition to entity type, you get the ontology ID of this entity within some medical ontology.
+<!-- In this dataset, there are paper title and abstract in the first two lines, and then there are individual entities, with beginning and end positions within title+abstract block. In addition to entity type, you get the ontology ID of this entity within some medical ontology. -->
 
-You will need to write some Python code to convert this into BIO encoding.
+在此数据集中，前两行有论文标题和摘要，然后有单独的实体，其开始和结束位置位于标题+摘要块内。除了实体类型之外，您还可以获得某个医学本体中该实体的本体 ID。
+
+<!-- You will need to write some Python code to convert this into BIO encoding. -->
+
+您需要编写一些 Python 代码将其转换为 BIO 编码。
 
 ## The Network
 

@@ -4,7 +4,8 @@ Lab Assignment from [AI for Beginners Curriculum](https://github.com/microsoft/a
 
 ## Task
 
-In this lab, you need to take any book, and use it as a dataset to train word-level text generator.
+<!-- In this lab, you need to take any book, and use it as a dataset to train word-level text generator. -->
+在本实验中，您需要拿任何一本书，并将其用作数据集来训练单词级文本生成器。
 
 ## The Dataset
 
