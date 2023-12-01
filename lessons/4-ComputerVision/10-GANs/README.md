@@ -95,9 +95,9 @@ GAN 是生成艺术图像的好方法。另一种有趣的技术是所谓的**�
 The way it works is the following:
 <!-- * We start with a random noise image (or with a content image, but for the sake of understanding it is easier to start from random noise) -->
 * 我们从随机噪声图像开始（或从内容图像开始，但为了理解，从随机噪声开始更容易）
-* Our goal would be to create such an image, that would be close to both content image and style image. This would be determined by two loss functions:
+<!-- * Our goal would be to create such an image, that would be close to both content image and style image. This would be determined by two loss functions:
    - **Content loss** is computed based on the features extracted by the CNN at some layers from current image and content image
-   - **Style loss** is computed between current image and style image in a clever way using Gram matrices (more details in the [example notebook](StyleTransfer.ipynb))
+   - **Style loss** is computed between current image and style image in a clever way using Gram matrices (more details in the [example notebook](StyleTransfer.ipynb)) -->
 
 * 我们的目标是创建这样一个图像，既接近内容图像又接近风格图像。这将由两个损失函数决定：
    - **Content loss内容损失** 是根据 CNN 在某些层从当前图像和内容图像中提取的特征来计算的。
