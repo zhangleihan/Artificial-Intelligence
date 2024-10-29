@@ -344,7 +344,6 @@ The Graph is available either as REST API, or as a large downloadable text file 
 微软研究院就进行了一项这样的尝试，并产生了[Microsoft Concept Graph](https://blogs.microsoft.com/ai/microsoft-researchers-release-graph-that-helps-machines-conceptualize/?WT.mc_id=academic-77998-cacaste)。
 
 它是使用继承关系分组在一起的实体的大集合is-a。它可以回答诸如“微软是什么？”之类的问题。- 答案类似于“概率为 0.87 的公司，概率为 0.75 的品牌”。
-
 该图可以作为 REST API 提供，也可以作为列出所有实体对的大型可下载文本文件提供。
 
 ## ✍️ Exercise: A Concept Graph

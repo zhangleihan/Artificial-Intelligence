@@ -8,7 +8,7 @@
 
 ## Text Generation and Perplexity
 
-The idea of a neural network being able to do general tasks without downstream training is presented in [Language Models are Unsupervised Multitask Learners](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf) paper. The main idea is the many other tasks can be modeled using **text generation**, because understanding text essentially means being able to produce it. Because the model is trained on a huge amount of text that encompasses human knowledge, it also becomes knowledgeable about wide variety of subjects.
+<!-- The idea of a neural network being able to do general tasks without downstream training is presented in [Language Models are Unsupervised Multitask Learners](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf) paper. The main idea is the many other tasks can be modeled using **text generation**, because understanding text essentially means being able to produce it. Because the model is trained on a huge amount of text that encompasses human knowledge, it also becomes knowledgeable about wide variety of subjects. -->
 
 [Language Models are Unsupervised Multitask Learners](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)论文中提出了神经网络无需下游训练即可完成一般任务的想法。主要思想是许多其他任务可以使用文本生成来建模，因为理解文本本质上意味着能够生成文本。由于该模型是根据包含人类知识的大量文本进行训练的，因此它也变得了解各种主题。
 
@@ -24,7 +24,8 @@ The idea of a neural network being able to do general tasks without downstream t
 
 <!-- Quality of language generating model can be defined using **perplexity**. It is intrinsic metric that allows us to measure the model quality without any task-specific dataset. It is based on the notion of *probability of a sentence* - the model assigns high probability to a sentence that is likely to be real (i.e. the model is not **perplexed** by it), and low probability to sentences that make less sense (eg. *Can it does what?*). When we give our model sentences from real text corpus, we would expect them to have high probability, and low **perplexity**. Mathematically, it is defined as normalized inverse probability of the test set: -->
 
-语言生成模型的质量可以使用**perplexity**困惑度来定义。它是内在的度量，允许我们在没有任何特定于任务的数据集的情况下测量模型质量。它基于句子概率的概念- 模型将高概率分配给可能是真实的句子（即模型不会被它困惑），并将低概率分配给不太有意义的句子（例如，可以它有什么作用？）。当我们从真实文本语料库中给出模型句子时，我们期望它们具有高概率和低困惑度。在数学上，它被定义为测试集的归一化逆概率： $$ \mathrm{Perplexity}(W) = \sqrt[N]{1\over P(W_1,...,W_N)} $$
+语言生成模型的质量可以使用**perplexity**困惑度来定义。它是内在的度量，允许我们在没有任何特定于任务的数据集的情况下测量模型质量。它基于句子概率的概念- 模型将高概率分配给可能是真实的句子（即模型不会被它困惑），并将低概率分配给不太有意义的句子（例如，可以它有什么作用？）。当我们从真实文本语料库中给出模型句子时，我们期望它们具有高概率和低困惑度。在数学上，它被定义为测试集的归一化逆概率： 
+<!-- $$ \mathrm{Perplexity}(W) = \sqrt[N]{1\over P(W_1,...,W_N)} $$ -->
 
 $$
 \mathrm{Perplexity}(W) = \sqrt[N]{1\over P(W_1,...,W_N)}
@@ -32,7 +33,7 @@ $$
 
 <!-- **You can experiment with text generation using [GPT-powered text editor from Hugging Face](https://transformer.huggingface.co/doc/gpt2-large)**. In this editor, you start writing your text, and pressing **[TAB]** will offer you several completion options. If they are too short, or you are not satisfied with them - press [TAB] again, and you will have more options, including longer pieces of text. -->
 
-您可以使用[GPT-powered text editor from Hugging Face](https://transformer.huggingface.co/doc/gpt2-large)**尝试文本生成。在此编辑器中，您开始编写文本，然后按[TAB]将为您提供几个完成选项。如果它们太短，或者您对它们不满意 - 再次按[TAB]，您将有更多选项，包括较长的文本片段。
+你可以使用[GPT-powered text editor from Hugging Face](https://transformer.huggingface.co/doc/gpt2-large)**尝试文本生成。在此编辑器中，开始编写文本，然后按[TAB]将为您提供几个完成选项。如果它们太短，或者对它们不满意 - 再次按[TAB]，将有更多选项，包括较长的文本片段。
 
 ## GPT is a Family
 
