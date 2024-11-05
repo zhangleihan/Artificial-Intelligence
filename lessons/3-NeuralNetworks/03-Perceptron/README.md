@@ -24,7 +24,7 @@
 
 >《纽约时报》当时对感知机进行了报道：[海军]期望电子计算机的胚胎能够行走、说话、看、写、自我复制并意识到自己的存在。
 
-## Perceptron Model
+## Perceptron Model (感知机)
 
 <!-- Suppose we have N features in our model, in which case the input vector would be a vector of size N. A perceptron is a **binary classification** model, i.e. it can distinguish between two classes of input data. We will assume that for each input vector x the output of our perceptron would be either +1 or -1, depending on the class. The output will be computed using the formula: -->
 
@@ -32,12 +32,13 @@
 
 y(x) = f(w<sup>T</sup>x)
 
-where f is a step activation function
+<!-- where f is a step activation function -->
+f是一个阶跃式激活函数。
 
 <!-- img src="http://www.sciweavers.org/tex2img.php?eq=f%28x%29%20%3D%20%5Cbegin%7Bcases%7D%0A%20%20%20%20%20%20%20%20%20%2B1%20%26%20x%20%5Cgeq%200%20%5C%5C%0A%20%20%20%20%20%20%20%20%20-1%20%26%20x%20%3C%200%0A%20%20%20%20%20%20%20%5Cend%7Bcases%7D%20%5C%5C%0A&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="f(x) = \begin{cases} +1 & x \geq 0 \\ -1 & x < 0 \end{cases} \\" width="154" height="50" / -->
 <img src="images/activation-func.png"/>
 
-## Training the Perceptron
+## Training the Perceptron （训练感知机）
 
 <!-- To train a perceptron we need to find a weights vector w that classifies most of the values correctly, i.e. results in the smallest **error**. This error is defined by **perceptron criterion** in the following manner: -->
 
@@ -45,8 +46,8 @@ where f is a step activation function
 
 E(w) = -&sum;w<sup>T</sup>x<sub>i</sub>t<sub>i</sub>
 
-where:
-
+<!-- where: -->
+在以上公式中，
 <!-- * the sum is taken on those training data points i that result in the wrong classification -->
 <!-- * x<sub>i</sub> is the input data, and t<sub>i</sub> is either -1 or +1 for negative and positive examples accordingly. -->
 
@@ -65,7 +66,8 @@ w<sup>(t+1)</sup> = w<sup>(t)</sup> - &eta;&nabla;E(w)
 
 w<sup>(t+1)</sup> = w<sup>(t)</sup> + &sum;&eta;x<sub>i</sub>t<sub>i</sub>
 
-The algorithm in Python looks like this:
+<!-- The algorithm in Python looks like this: -->
+Python代码如下：
 
 ```python
 def train(positive_examples, negative_examples, num_iterations = 100, eta = 1):
@@ -87,19 +89,21 @@ def train(positive_examples, negative_examples, num_iterations = 100, eta = 1):
     return weights
 ```
 
-## Conclusion
+<!-- ## Conclusion -->
+## 总结
 
 <!-- In this lesson, you learned about a perceptron, which is a binary classification model, and how to train it by using a weights vector. -->
 
-在本课程中，您了解了感知机（一种二元分类模型），以及如何使用权重向量来训练它。
+在本课程中，我们了解了感知机（一种二元分类模型），以及如何使用权重向量来训练它。
 
-## 🚀 Challenge
-
-If you'd like to try to build your own perceptron, try [this lab on Microsoft Learn](https://docs.microsoft.com/en-us/azure/machine-learning/component-reference/two-class-averaged-perceptron?WT.mc_id=academic-77998-cacaste) which uses the [Azure ML designer](https://docs.microsoft.com/en-us/azure/machine-learning/concept-designer?WT.mc_id=academic-77998-cacaste).
+<!-- ## 🚀 Challenge -->
+<!--  -->
+<!-- <!-- <!-- <!-- <!-- <!-- If you'd like to try to build your own perceptron, try [this lab on Microsoft Learn](https://docs.microsoft.com/en-us/azure/machine-learning/component-reference/two-class-averaged-perceptron?WT.mc_id=academic-77998-cacaste) which uses the [Azure ML designer](https://docs.microsoft.com/en-us/azure/machine-learning/concept-designer?WT.mc_id=academic-77998-cacaste). --> --> --> --> --> -->
 
 ## [Post-lecture quiz](https://red-field-0a6ddfd03.1.azurestaticapps.net/quiz/203)
 
-## Review & Self Study
+<!-- ## Review & Self Study -->
+## 复习与自学
 
 <!-- To see how we can use perceptron to solve a toy problem as well as real-life problems, and to continue learning - go to [Perceptron](Perceptron.ipynb) notebook. -->
 
@@ -114,7 +118,7 @@ If you'd like to try to build your own perceptron, try [this lab on Microsoft Le
 
 <!-- In this lesson, we have implemented a perceptron for binary classification task, and we have used it to classify between two handwritten digits. In this lab, you are asked to solve the problem of digit classification entirely, i.e. determine which digit is most likely to correspond to a given image. -->
 
-在本课中，我们实现了用于二元分类任务的感知机，并用它来对两个手写数字进行分类。在本实验中，您需要完全解决数字分类问题，即确定哪个数字最有可能对应于给定图像。
+在本课中，我们实现了用于二元分类任务的感知机，并用它来对两个手写数字进行分类。在本实验中，需要完全解决数字分类问题，即确定哪个数字最有可能对应于给定图像。
 
 * [Instructions](lab/README.md)
-* [Notebook](PerceptronMultiClass.ipynb)
+* [Notebook](lab/PerceptronMultiClass.ipynb)

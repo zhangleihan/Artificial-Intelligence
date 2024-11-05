@@ -1,4 +1,4 @@
-# Neural Network Frameworks
+# Neural Network Frameworks （神经网络框架）
 
 <!-- As we have learned already, to be able to train neural networks efficiently we need to do two things: -->
 正如我们已经了解到的，为了能够有效地训练神经网络，我们需要做两件事：
@@ -9,7 +9,7 @@
 * 对张量进行操作，例如。乘法、加法和计算一些函数，例如 sigmoid 或 softmax
 * 计算所有表达式的梯度，以执行梯度下降优化
 
-## [Pre-lecture quiz](https://red-field-0a6ddfd03.1.azurestaticapps.net/quiz/105)
+<!-- ## [Pre-lecture quiz](https://red-field-0a6ddfd03.1.azurestaticapps.net/quiz/105) -->
 
 <!-- While the `numpy` library can do the first part, we need some mechanism to compute gradients. In [our framework](../04-OwnFramework/OwnFramework.ipynb) that we have developed in the previous section we had to manually program all derivative functions inside the `backward` method, which does backpropagation. Ideally, a framework should give us the opportunity to compute gradients of *any expression* that we can define. -->
 
@@ -32,28 +32,28 @@ High-level API| [Keras](https://keras.io/) | [PyTorch Lightning](https://pytorch
 
 <!-- **Low-level APIs** in both frameworks allow you to build so-called **computational graphs**. This graph defines how to compute the output (usually the loss function) with given input parameters, and can be pushed for computation on GPU, if it is available. There are functions to differentiate this computational graph and compute gradients, which can then be used for optimizing model parameters. -->
 
-两个框架中的**低级 API**都允许您构建所谓的**计算图**。该图定义了如何使用给定的输入参数计算输出（通常是损失函数），并且可以推送到 GPU 上进行计算（如果可用）。有一些函数可以区分该计算图并计算梯度，然后可以将其用于优化模型参数。
+两个框架中的**低级 API**都允许构建所谓的**计算图**。该图定义了如何使用给定的输入参数计算输出（通常是损失函数），并且可以推送到 GPU 上进行计算（如果可用）。有一些函数可以区分该计算图并计算梯度，然后可以将其用于优化模型参数。
 
 <!-- **High-level APIs** pretty much consider neural networks as a **sequence of layers**, and make constructing most of the neural networks much easier. Training the model usually requires preparing the data and then calling a `fit` function to do the job. -->
 
 **高级 API**几乎将神经网络视为**神经网络层序列**，并且使构建大多数神经网络变得更加容易。训练模型通常需要准备数据，然后调用函数fit来完成这项工作。
 
 <!-- The high-level API allows you to construct typical neural networks very quickly without worrying about lots of details. At the same time, low-level API offer much more control over the training process, and thus they are used a lot in research, when you are dealing with new neural network architectures. -->
-高级 API 允许您非常快速地构建典型的神经网络，而无需担心大量细节。同时，低级 API 提供了对训练过程的更多控制，因此当您处理新的神经网络架构时，它们在研究中被大量使用。
+高级 API 允许我们非常快速地构建典型的神经网络，而无需担心大量细节。同时，低级 API 提供了对训练过程的更多控制，因此当处理新的神经网络架构时，它们在研究中被大量使用。
 
 
 <!-- It is also important to understand that you can use both APIs together, eg. you can develop your own network layer architecture using low-level API, and then use it inside the larger network constructed and trained with the high-level API. Or you can define a network using the high-level API as a sequence of layers, and then use your own low-level training loop to perform optimization. Both APIs use the same basic underlying concepts, and they are designed to work well together. -->
-同样重要的是要了解您可以同时使用这两个 API，例如。您可以使用低级 API 开发自己的网络层架构，然后在使用高级 API 构建和训练的更大网络中使用它。或者，您可以使用高级 API 将网络定义为层序列，然后使用您自己的低级训练循环来执行优化。这两个 API 使用相同的基本概念，并且它们被设计为可以很好地协同工作。
+同样重要的是要了解我们可以同时使用这两个 API，例如。您可以使用低级 API 开发自己的网络层架构，然后在使用高级 API 构建和训练的更大网络中使用它。或者，我们可以使用高级 API 将网络定义为层序列，然后使用我们自己的低级训练循环来执行优化。这两个 API 使用相同的基本概念，并且它们被设计为可以很好地协同工作。
 
 ## Learning
 
 <!-- In this course, we offer most of the content both for PyTorch and TensorFlow. You can choose your preferred framework and only go through the corresponding notebooks. If you are not sure which framework to choose, read some discussions on the internet regarding **PyTorch vs. TensorFlow**. You can also have a look at both frameworks to get better understanding. -->
 
-在本课程中，我们提供 PyTorch 和 TensorFlow 的大部分内容。您可以选择您喜欢的框架并仅浏览相应的笔记本。如果您不确定选择哪个框架，请阅读互联网上有关**PyTorch** 与 **TensorFlow** 的一些讨论。您还可以查看这两个框架以更好地理解。
+在本课程中，我们介绍 PyTorch的用法。
 
 <!-- Where possible, we will use High-Level APIs for simplicity. However, we believe it is important to understand how neural networks work from the ground up, thus in the beginning we start by working with low-level API and tensors. However, if you want to get going fast and do not want to spend a lot of time on learning these details, you can skip those and go straight into high-level API notebooks. -->
 
-为了简单起见，我们将尽可能使用高级 API。然而，我们认为从头开始理解神经网络如何工作非常重要，因此一开始我们从使用低级 API 和张量开始。但是，如果您想快速入门并且不想花费大量时间来学习这些细节，则可以跳过这些内容并直接进入高级 API 笔记本。
+为了简单起见，我们将尽可能使用高级 API。然而，我们认为从头开始理解神经网络如何工作非常重要，因此一开始我们从使用低级 API 和张量开始。但是，如果想快速入门并且不想花费大量时间来学习这些细节，则可以跳过这些内容并直接进入高级 API 笔记本。
 
 ## ✍️ Exercises: Frameworks
 
@@ -129,28 +129,17 @@ Validation error = 5.1 | Validation error = 20
 <!-- In this lesson, you learned about the differences between the various APIs for the two most popular AI frameworks, TensorFlow and PyTorch. In addition, you learned about a very important topic, overfitting. -->
 在本课程中，您了解了两种最流行的 AI 框架 TensorFlow 和 PyTorch 的各种 API 之间的差异。另外，你还了解了一个非常重要的话题，过度拟合。
 
-## 🚀 Challenge
+<!-- ## 🚀 Challenge
 
 In the accompanying notebooks, you will find 'tasks' at the bottom; work through the notebooks and complete the tasks.
 
-## [Post-lecture quiz](https://red-field-0a6ddfd03.1.azurestaticapps.net/quiz/205)
+## [Post-lecture quiz](https://red-field-0a6ddfd03.1.azurestaticapps.net/quiz/205) -->
 
-## Review & Self Study
-
-Do some research on the following topics:
-
-- TensorFlow
-- PyTorch
-- Overfitting
-
-Ask yourself the following questions:
-
-- What is the difference between TensorFlow and PyTorch?
-- What is the difference between overfitting and underfitting?
 
 ## [Assignment](lab/README.md)
 
-In this lab, you are asked to solve two classification problems using single- and multi-layered fully-connected networks using PyTorch or TensorFlow.
+<!-- In this lab, you are asked to solve two classification problems using single- and multi-layered fully-connected networks using PyTorch or TensorFlow. -->
+使用pytorch实现单层和多层全连接神经网络实现二分类任务。
 
 * [Instructions](lab/README.md)
 * [Notebook](lab/LabFrameworks.ipynb)
